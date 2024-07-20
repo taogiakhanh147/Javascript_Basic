@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var courses = ['PHP', 'C#', 'Javascript']
+        Array.prototype.map2 = function (callback) {
+            var output = [], arrayLength = this.length
+            for(var i = 0; i < arrayLength; i++)
+            {
+                var item = callback(this[i])
+                output.push(item)
+            }
+            return output.join('\n')
+        }
+
+        var htmls = courses.map2(function(course){
+            return `<h2>${course}</h2>`
+        })
+
+        console.log(htmls)
+    </script>
+</body>
+
+</html>

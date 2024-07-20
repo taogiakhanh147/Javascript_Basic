@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai20</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- props children -->
+    <script>
+        // Vi du 1
+        var myInfo = {
+            name: 'Khanh',
+            age: 23,
+            address: 'Distric 6'
+        }
+         myInfo.rank = 'normal' // cach them dang 1
+         myInfo['e-mail'] = 'taogiakhanh@gmail.com' // cach them dang 2
+        console.log(myInfo)
+        console.log(myInfo.name)
+        console.log(myInfo['age'])
+
+        // vi du 2
+        var myInfo = {
+            name: 'Khanh',
+            age: 23,
+        }  
+        var myKey = 'age'
+        // console.log(myInfo[myKey])
+
+        // vi du 3
+        var myKey = 'address'
+        var myInfo = {
+            name: 'Khanh',
+            age: 23,
+            [myKey]: 'District 6'
+        }  
+        // console.log(myInfo)
+
+        // vi du 4
+        var myKey = 'address'
+        var myInfo = {
+            name: 'Khanh',
+            age: 23,
+            [myKey]: 'District 6',
+            getName: function() {
+                return this.name;
+            },
+            getAge: () => {
+                return myInfo.age;
+            }
+        }  
+        // console.log(myInfo.getName())
+        // console.log(myInfo.getAge())
+
+    </script>
+</body>
+</html>

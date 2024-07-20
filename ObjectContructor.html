@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        // Vi du 1
+        function User(firstName, lastName, avatar) {
+            this.firstName = firstName,
+            this.lastName = lastName,
+            this.avatar = avatar,
+            this.getFullName = function() {
+                return `${this.lastName} ${this.firstName}`
+            }
+        }
+
+        var user1 = new User('Khanh', 'Tao', 'image1')
+        var user2 = new User('DA', 'Trinh', 'image2')
+
+        user1.address = 'District 6'
+        user2.sex = 'female'
+
+        console.log(user1.getFullName())
+        console.log(user2.getFullName())
+    </script>
+</body>
+
+</html>

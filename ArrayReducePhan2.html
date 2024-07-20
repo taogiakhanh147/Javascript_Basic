@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bai tap 1
+        // Flat - "Làm phẳng" mảng từ Depth array - "Mảng sâu"
+        var depthArray = [1, 2, [3, 4], 5, 6, [7, 8], 9]
+
+        var flatArray = depthArray.reduce(
+            function (flatOutput, depthItem) {
+                return flatOutput.concat(depthItem)
+            }, [])
+
+        // console.log(flatArray)
+
+        // Bai tap 2
+        // Lay ra cac khoa hoc dua vao 1 mang moi
+        var Topics = [
+            {
+                topic: "Front-end",
+                courses: [
+                    {
+                        id: 1,
+                        title: 'HTML, CSS'
+                    },
+                    {
+                        id: 2,
+                        title: 'javascript'
+                    }
+                ]
+            },
+            {
+                topic: 'Back-end',
+                courses: [
+                    {
+                        id: 1,
+                        title: 'C#'
+                    },
+                    {
+                        id: 2,
+                        title: '.NET'
+                    }
+                ]
+            }
+        ]
+
+        var result = Topics.reduce(
+            function(topicOutput, topic){
+                return topicOutput.concat(topic.topic)
+        }, [])
+
+        var result2 = Topics.reduce((topicOutput,topic) => 
+            topicOutput.concat(topic.courses), []
+        )
+        
+        // console.log(result)
+        // console.log(result2)
+    </script>
+</body>
+
+</html>

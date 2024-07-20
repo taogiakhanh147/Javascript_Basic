@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Array
+    - To string: in ra mảng với mặc định là dấu ','
+    - Join: có tham số truyền vào gồm các dấu sau: ',', '|'
+    - Pop: xóa element cuối mảng và trả về phần tử đã xóa
+    - Push: thêm 1 hoặc nhìu phần tử vào cuối mảng
+            và trả về độ dài mảng
+    - Shift: xóa element đầu mảng và trả về phần tử đã xóa
+    - Unshift: thêm 1 hoặc nhìu phần tử vào đầu mảng 
+               và trả về độ dài mảng
+    - Splice: sẽ cắt đi phần tử và in ra phần tử đã cắt
+              và có thể chèn phần tử.
+              Ví dụ language.splice(p1, p2, p3)
+                + p1: xác định index của phần tử trong mảng
+                + p2: xóa bao nhiêu phần tử
+                + p3: chèn dữ liệu vào đầu của p1
+    - Concat: nối mảng ví dụ language1.concat(language2)
+    - Slice: cắt mảng để xuất ra mảng đó ví dụ:
+             var language = [
+                css, 
+                java,
+                c#
+             ]
+             language.slice(1) => java, c#
+             language.slice(1, 2) => java
+    -->
+    <script>
+        var language = ["PHP", "Javascipt", "C#"]
+        var language2 = [".NET", "ASP.NET"]
+        // Vi du ve toString
+        // console.log(language.toString())
+
+        // Vi du ve Join
+        // console.log(language.join(' - '))
+
+        // Vi du ve Pop
+        // console.log(language.pop())
+        // console.log(language)
+
+        // Vi du ve Push
+        // console.log(language.push('.net'))
+        // console.log(language)
+
+        // Vi du ve Shift
+        // console.log(language.shift())
+        // console.log(language)
+
+        // Vi du ve unshift
+        // console.log(language.unshift('NodeJS'))
+        // console.log(language)
+
+        // ví dụ về splice
+        // console.log(language.splice(1, 2, '.net'));
+        // console.log(language)
+
+        // vi du ve concat
+        // console.log(language.concat(language2))
+
+        // Vi du ve slice
+        console.log(language.slice(1, 2))
+        console.log(language)
+    </script>
+</body>
+
+</html>

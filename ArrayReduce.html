@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Course = [
+            {
+                id: 1,
+                name: 'PHP',
+                coin: 100
+            },
+            {
+                id: 2,
+                name: 'C#',
+                coin: 200
+            },
+            {
+                id: 3,
+                name: 'Javascript',
+                coin: 300
+            },
+        ]
+
+        // Cách viết 1
+        // Đối số total là accumulator, coin là valueCurrent
+        var totalCoin1 = Course.reduce(function(total,coin){
+            return total + coin.coin
+        },0)
+
+        // Cách viết 2
+        // Đối số a là accumulator, valueCurrent
+        var totalCoin2 = Course.reduce((a, b) =>
+            a + b.coin, 0
+        )
+
+        console.log(totalCoin1)
+        console.log(totalCoin2)
+    </script>
+</body>
+</html>
